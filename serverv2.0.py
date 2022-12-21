@@ -17,9 +17,10 @@ data=[]
 
 s.bind(('',port))
 s.listen()
-c, addr = s.accept()
-print("Connection accepted from " + repr(addr[1]))
+
 while True:  
+            c, addr = s.accept()
+            print("Connection accepted from " + repr(addr[1]))
             data = c.recv(50000)
             #if(data != 0):
             size=len(data)/4.0
